@@ -1,9 +1,12 @@
 import React, { memo } from 'react'
 
-const Child = ({obj}) => {
+const Child = ({obj1, obj2}) => {
   console.log("Child Component");
   return (
-    <div>{obj?.description}</div>
+    <>
+    <div>{obj1?.desc}</div>
+    <div>{obj2("Example")?.desc}</div>
+    </>
   )
 }
 
